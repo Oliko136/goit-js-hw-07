@@ -4,7 +4,7 @@ const gallery = document.querySelector('.gallery');
 
 renderGallery(galleryItems);
 
-var lightbox = new SimpleLightbox('.gallery__item', {});
+var lightbox = new SimpleLightbox('.gallery__item', {captionsData: 'alt', captionDelay: 250});
 
 function renderGallery(items) {
     const markup = items.map(({ preview, original, description }) =>
