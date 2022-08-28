@@ -38,4 +38,16 @@ function onModalOpen(event) {
     `);
 
     instance.show();
+
+    window.addEventListener('keydown', onModalEscClose);
+    
+    function onModalEscClose(event) {
+
+    if (event.code === 'Escape') {
+        instance.close()
+        window.removeEventListener('keydown', onModalEscClose);
+    }
 }
+}
+
+
