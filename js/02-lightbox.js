@@ -4,6 +4,8 @@ const gallery = document.querySelector('.gallery');
 
 renderGallery(galleryItems);
 
+var lightbox = new SimpleLightbox('.gallery__item', {});
+
 function renderGallery(items) {
     const markup = items.map(({ preview, original, description }) =>
         `<li><a class="gallery__item" href=${original}>
